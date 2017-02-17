@@ -1,0 +1,100 @@
+1) Write a program to accepts two numbers from stdin and find all the odd as well as even numbers present in between them.
+import java.util.Scanner;
+
+import java.util.Scanner;
+	public class acad 
+	{ 
+    public static void main(String args[])
+	{
+	Scanner s=new Scanner(System.in); 
+	int a,b; 
+	System.out.println("Enter the first number"); 
+	a=s.nextInt(); //the user will give the first number
+	System.out.println("Enter the second number:");
+	b=s.nextInt(); //and now we are provided by second number from the user
+	System.out.println("The even numbers are");
+	for(int i=a;i<=b;i++)
+	{
+	if(i%2==0)//when divided by 2 and if the denominator is 0.then it is even.
+	{
+	System.out.println(i); 
+	}
+	System.out.println("The odd numbers are"); 
+	for(i=a;i<=b;i++) 
+	{ 
+	if(i%2!=0) System.out.println(i);//when we divide the i value by 2 and if the denominator is not zero then it's odd.
+	}
+	} }}
+
+
+We will get the first number from the user as well the second number.it will go inside the for loop.and will check whethere the given
+number is divisible by 2 and the remainder is 0. if so the number will be "even". if the remainder is 1 then it will be a odd number.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+2) Joe is scared to go to school. When her dad asked the reason, joe said she is unable to complete the task given by her teacher. 
+The task was to find the “first 10 multiples” of the number entered from stdin
+
+
+
+	import java.util.Scanner;
+
+	public class acad 
+	{ 
+	public static void main(String args[]) 
+	{ 
+	Scanner s=new Scanner(System.in);
+	int a;
+	System.out.println("Enter the number"); 
+	a=s.nextInt(); //userr will provide teh input number
+	for(int i=1;i<=10;i++) //and the for loop will run 10 times.
+	{
+	System.out.println(a+" * "+i+" = "+(a*i)); //will print the output.
+	}
+	} }
+
+
+the input will be obtained from the user.and in the next line it will go inside the loop. if the input for example is 2 will check until
+the number becmes 10.a*i will multiply the (a=the given input) with the (i-loop numbers from 1 to 10).and will print the output.
+-------------------------------------------------------------------------------------------------------------------------------
+3) Write a program consisting method sum() and demonstrate the concept of method overloading using this method.
+
+import java.util.Scanner;
+public class acad
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("1.Sum of two numbers \n 2.Sum of three numbers");//it prints the output 
+int a =s.nextInt();
+switch (a)
+{
+case 1 : System.out.println("Enter two numbers");
+int x=s.nextInt();
+int y=s.nextInt(); 
+sum(x,y); //here two numbers will be added up. 
+break; 
+case 2 : 
+System.out.println("Enter three numbers");
+int b=s.nextInt();
+int c=s.nextInt(); 
+int d=s.nextInt();
+sum(b,c,d); //sum of three integers is done here
+break;
+}
+}
+
+public static void sum(int a,int b) //here two integers are given by the user.
+{
+System.out.println("Sum of two numbers are "+(a+b));//two integers are added up
+}
+public static void sum(int a,int b,int c) //here three integers are given by the user 
+{ 
+System.out.println("Sum of three numbers are "+(a+b+c)); //three integers are added up.
+}
+}
+
+
+here switch case is used to check whethere to get two numbers or three numbers from the user. and if for example two numbers then we need
+to enter those two numbers .and will get the number and sum those two numbers and print that in output.the same can be done for three numbers
+to.
